@@ -29,19 +29,17 @@ Grey dark 3: #999
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
-  font-size: 62.5%; // 1 rem = 10px     => 10px(our target) / 16px(browser default) = 62.5%
 }
 
 html {
+  font-size: 62.5%; // 1 rem = 10px     => 10px(our target) / 16px(browser default) = 62.5%
   box-sizing: border-box;
 }
 
@@ -54,6 +52,4 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
-  font-size: 5rem; // just for testing now
 }
