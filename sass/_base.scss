@@ -27,11 +27,16 @@ Grey dark 3: #999
   --color-grey-dark-3: #999;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
-  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
 
   --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; // 1200/16
+$bp-large: 68.75em; // 1100/16
+$bp-medium: 56.25em; // 900/16
+$bp-small: 37.5em; // 600/16
+$bp-smallest: 31.25em; // 500/16
 
 *,
 *::before,
@@ -42,8 +47,12 @@ Grey dark 3: #999
 }
 
 html {
-  font-size: 62.5%; // 1 rem = 10px     => 10px(our target) / 16px(browser default) = 62.5%
   box-sizing: border-box;
+  font-size: 62.5%; // 1 rem = 10px     => 10px(our target) / 16px(browser default) = 62.5%
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 1 rem = 8px     => 8px(our target) / 16px(browser default) = 50%
+  }
 }
 
 body {
